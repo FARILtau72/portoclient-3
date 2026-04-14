@@ -224,6 +224,133 @@
             transform: translateZ(-2px);
         }
 
+        .id-card-3d {
+            width: 100%;
+            height: 100%;
+            perspective: 1400px;
+            animation: idFloat 6.2s ease-in-out infinite;
+            cursor: pointer;
+            touch-action: manipulation;
+        }
+
+        .id-card-inner {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transition: transform 0.9s cubic-bezier(0.22, 0.61, 0.36, 1);
+        }
+
+        .id-card-3d.flipped .id-card-inner,
+        .hero-card-shell:hover .id-card-inner {
+            transform: rotateY(180deg);
+        }
+
+        .id-face {
+            position: absolute;
+            inset: 0;
+            border-radius: 1.5rem;
+            overflow: hidden;
+            backface-visibility: hidden;
+            -webkit-backface-visibility: hidden;
+            border: 1px solid rgba(140, 200, 195, 0.25);
+            background: linear-gradient(165deg, rgba(33, 43, 62, 0.95), rgba(17, 24, 38, 0.96));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08), 0 20px 30px rgba(0, 0, 0, 0.32);
+        }
+
+        .id-face::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(115deg, transparent 15%, rgba(140, 200, 195, 0.1) 50%, transparent 86%);
+            mix-blend-mode: screen;
+            opacity: 0.6;
+            pointer-events: none;
+        }
+
+        .id-back {
+            transform: rotateY(180deg);
+        }
+
+        .id-avatar {
+            width: 86px;
+            height: 86px;
+            border-radius: 18px;
+            border: 1px solid rgba(140, 200, 195, 0.3);
+            background: radial-gradient(circle at 30% 25%, rgba(140, 200, 195, 0.32), rgba(18, 24, 38, 0.95));
+            box-shadow: inset 0 0 20px rgba(140, 200, 195, 0.2), 0 0 16px rgba(140, 200, 195, 0.15);
+        }
+
+        .id-avatar-photo {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 16px;
+            filter: saturate(0.96) contrast(1.04);
+        }
+
+        .id-chip {
+            border: 1px solid rgba(140, 200, 195, 0.26);
+            background: linear-gradient(180deg, rgba(140, 200, 195, 0.16), rgba(127, 169, 199, 0.12));
+            box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+        }
+
+        .id-bar {
+            height: 8px;
+            border-radius: 9999px;
+            background: rgba(255, 255, 255, 0.07);
+            overflow: hidden;
+        }
+
+        .id-bar > span {
+            display: block;
+            height: 100%;
+            border-radius: inherit;
+            background: linear-gradient(90deg, rgba(140, 200, 195, 0.75), rgba(127, 169, 199, 0.8));
+            box-shadow: 0 0 10px rgba(140, 200, 195, 0.26);
+        }
+
+        .id-qr {
+            width: 68px;
+            height: 68px;
+            border-radius: 10px;
+            border: 1px solid rgba(140, 200, 195, 0.28);
+            background-image:
+                linear-gradient(90deg, rgba(140, 200, 195, 0.38) 10%, transparent 10%),
+                linear-gradient(rgba(140, 200, 195, 0.38) 10%, transparent 10%);
+            background-size: 12px 12px;
+            background-color: rgba(11, 18, 31, 0.95);
+        }
+
+        .id-mobile-tip {
+            position: absolute;
+            right: 0.9rem;
+            bottom: 0.9rem;
+            z-index: 30;
+            display: none;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.4rem 0.65rem;
+            border-radius: 9999px;
+            border: 1px solid rgba(140, 200, 195, 0.35);
+            background: rgba(16, 24, 38, 0.88);
+            color: #d6e7f0;
+            font-size: 0.68rem;
+            line-height: 1;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            box-shadow: 0 8px 14px rgba(0, 0, 0, 0.28);
+        }
+
+        .id-mobile-tip:active {
+            transform: translateY(1px);
+        }
+
+        @keyframes idFloat {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+
         .depth-ring {
             position: absolute;
             border-radius: 9999px;
@@ -383,6 +510,21 @@
             .glass-card:hover {
                 transform: translateY(-2px);
             }
+            .hero-card-shell:hover .id-card-inner {
+                transform: none;
+            }
+            .id-mobile-tip {
+                display: inline-flex;
+            }
+        }
+
+        @media (pointer: coarse) {
+            .hero-card-shell:hover .id-card-inner {
+                transform: none;
+            }
+            .id-mobile-tip {
+                display: inline-flex;
+            }
         }
 
         @media (prefers-reduced-motion: reduce) {
@@ -486,44 +628,89 @@
 
             
             <div class="lg:col-span-5 relative w-full aspect-[4/5] md:aspect-square max-w-xs sm:max-w-md md:max-w-lg mx-auto z-10 reveal active perspective-1000">
-                
-               
                 <div id="tilt-card" class="hero-card-shell w-full h-full relative transform-style-3d transition-transform duration-200 ease-out">
-                    
-                    <div class="absolute inset-0 bg-gradient-to-br from-accent-blue/35 via-accent-cyan/15 to-transparent rounded-3xl blur-2xl transform -translate-z-10"></div>
-                    
-                    
-                    <div class="absolute inset-0 bg-darker/80 backdrop-blur-xl rounded-3xl border border-white/10 p-6 md:p-8 flex flex-col shadow-2xl">
-                       
-                        <div class="flex gap-2 mb-8">
-                            <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
-                            <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
-                            <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-blue/25 via-accent-cyan/12 to-transparent rounded-3xl blur-2xl transform -translate-z-10"></div>
+
+                    <div id="id-card" class="id-card-3d">
+                        <div class="id-card-inner">
+                            <article class="id-face id-front p-5 sm:p-6 md:p-7 flex flex-col">
+                                <div class="flex items-center justify-between mb-5">
+                                    <div class="text-[11px] sm:text-xs uppercase tracking-[0.24em] text-cyan-100/70">Digital ID</div>
+                                    <div class="text-[11px] sm:text-xs text-cyan-100/70">Axioo Class Program</div>
+                                </div>
+
+                                <div class="flex items-start justify-between gap-4 mb-5">
+                                    <div>
+                                        <h3 class="text-2xl sm:text-3xl font-extrabold text-white leading-tight">Khaidar Ali</h3>
+                                        <p class="text-cyan-100/80 mt-1 text-sm sm:text-base">Web Developer</p>
+                                    </div>
+                                    <div class="id-avatar shrink-0 overflow-hidden">
+                                        <img src="https://i.pravatar.cc/172?img=13" alt="Foto profil Khaidar Ali" class="id-avatar-photo" width="86" height="86" decoding="async">
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm mb-6">
+                                    <div class="id-chip rounded-xl px-3 py-2">
+                                        <p class="text-cyan-100/60 uppercase text-[10px] tracking-[0.14em]">Status</p>
+                                        <p class="text-white font-semibold">Intern PKL</p>
+                                    </div>
+                                    <div class="id-chip rounded-xl px-3 py-2">
+                                        <p class="text-cyan-100/60 uppercase text-[10px] tracking-[0.14em]">Focus</p>
+                                        <p class="text-white font-semibold">PHP & Laravel</p>
+                                    </div>
+                                </div>
+
+                                <div class="mt-auto flex items-center justify-between gap-4">
+                                    <div>
+                                        <p class="text-[10px] uppercase tracking-[0.16em] text-cyan-100/65">ID Number</p>
+                                        <p class="font-mono text-sm text-white">KHDR-ALI-2026</p>
+                                    </div>
+                                    <div class="id-qr"></div>
+                                </div>
+                            </article>
+
+                            <article class="id-face id-back p-5 sm:p-6 md:p-7 flex flex-col">
+                                <div class="flex items-center justify-between mb-5">
+                                    <div class="text-[11px] sm:text-xs uppercase tracking-[0.24em] text-cyan-100/70">Skill Matrix</div>
+                                    <span class="text-[11px] sm:text-xs text-cyan-100/70">Tap / Hover</span>
+                                </div>
+
+                                <div class="space-y-4 mb-6">
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1"><span class="text-cyan-100/85">PHP</span><span class="text-white">90%</span></div>
+                                        <div class="id-bar"><span style="width: 90%"></span></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1"><span class="text-cyan-100/85">Laravel</span><span class="text-white">85%</span></div>
+                                        <div class="id-bar"><span style="width: 85%"></span></div>
+                                    </div>
+                                    <div>
+                                        <div class="flex justify-between text-sm mb-1"><span class="text-cyan-100/85">Frontend</span><span class="text-white">82%</span></div>
+                                        <div class="id-bar"><span style="width: 82%"></span></div>
+                                    </div>
+                                </div>
+
+                                <div class="grid grid-cols-2 gap-3 text-xs sm:text-sm mt-auto">
+                                    <a href="https://instagram.com/kedarr_" target="_blank" rel="noopener noreferrer" class="id-chip rounded-xl px-3 py-2 hover:opacity-90 transition-opacity">
+                                        <p class="text-cyan-100/60 uppercase text-[10px] tracking-[0.14em]">Instagram</p>
+                                        <p class="text-white font-semibold">@kedarr_</p>
+                                    </a>
+                                    <a href="https://gitlab.com/khaidarTB" target="_blank" rel="noopener noreferrer" class="id-chip rounded-xl px-3 py-2 hover:opacity-90 transition-opacity">
+                                        <p class="text-cyan-100/60 uppercase text-[10px] tracking-[0.14em]">GitLab</p>
+                                        <p class="text-white font-semibold">@khaidarTB</p>
+                                    </a>
+                                </div>
+                            </article>
                         </div>
 
-                       
-                        <div class="font-mono text-xs sm:text-sm md:text-base text-gray-400 space-y-2 sm:space-y-3 flex-grow leading-relaxed overflow-hidden">
-                            <p><span class="text-accent-purple">const</span> <span class="text-white">developer</span> <span class="text-accent-cyan">=</span> {</p>
-                            <p class="pl-6"><span class="text-gray-300">name</span>: <span class="text-[#a6e22e]">'Khaidar Ali'</span>,</p>
-                            <p class="pl-6"><span class="text-gray-300">role</span>: <span class="text-[#a6e22e]">'PHP Developer'</span>,</p>
-                            <p class="pl-6"><span class="text-gray-300">school</span>: <span class="text-[#a6e22e]">'SMK Taruna Bangsa'</span>,</p>
-                            <p class="pl-6"><span class="text-gray-300">internship</span>: <span class="text-[#a6e22e]">'Axioo Indonesia'</span>,</p>
-                            <br>
-                            <p class="pl-6"><span class="text-accent-blue">build</span>() {</p>
-                            <p class="pl-12"><span class="text-accent-purple">return</span> <span class="text-[#e6db74]">this</span>.skills.map(<span class="text-accent-cyan">tech</span> <span class="text-accent-purple">=></span> {</p>
-                            <p class="pl-16"><span class="text-accent-blue">createMagic</span>(tech);</p>
-                            <p class="pl-12">});</p>
-                            <p class="pl-6">}</p>
-                            <p>};</p>
-                        </div>
+                        <button id="id-card-toggle" type="button" class="id-mobile-tip" aria-label="Balik kartu ID">
+                            <i data-lucide="refresh-cw" class="w-3.5 h-3.5"></i>
+                            Balik
+                        </button>
                     </div>
 
-                    <!-- Floating Badges -->
-                    <div class="hidden sm:flex absolute -bottom-6 -left-6 md:bottom-10 md:-left-10 w-16 h-16 rounded-2xl bg-darker/60 border border-white/10 items-center justify-center backdrop-blur-xl shadow-2xl transform rotate-12 translate-z-20">
-                        <i data-lucide="blocks" class="text-accent-blue w-8 h-8"></i>
-                    </div>
-                    <div class="hidden sm:flex absolute top-10 -right-4 md:top-20 md:-right-12 w-16 h-16 rounded-2xl bg-darker/60 border border-white/10 items-center justify-center backdrop-blur-xl shadow-2xl transform -rotate-12 translate-z-20">
-                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Logo Laravel" class="w-8 h-8" width="32" height="32" decoding="async">
+                    <div class="hidden sm:flex absolute -bottom-5 -left-5 w-14 h-14 rounded-2xl bg-darker/70 border border-white/10 items-center justify-center backdrop-blur-xl shadow-xl">
+                        <i data-lucide="id-card" class="text-accent-blue w-6 h-6"></i>
                     </div>
                 </div>
             </div>
@@ -586,7 +773,7 @@
                             Sekarang, saya sedang menjalani <strong class="text-white">Praktek Kerja Lapangan (PKL) di Axioo</strong>. Ini bukan sekadar magang biasa; di sini saya belajar best-practice pengembangan software, kolaborasi tim (GitLab), dan arsitektur aplikasi berbasis enterprise.
                         </p>
                         <p>
-                            Senjata utama saya adalah <strong class="text-accent-laravel">PHP & Laravel</strong>. Saya suka merancang database yang efisien, membangun API yang cepat, dan menyatukannya dengan *frontend* modern agar pengguna mendapatkan pengalaman terbaik.
+                            Senjata utama saya adalah <strong class="text-accent-laravel">PHP & Laravel</strong>. Saya suka merancang database yang efisien, membangun API yang cepat, dan menyatukannya dengan frontend modern agar pengguna mendapatkan pengalaman terbaik.
                         </p>
                     </div>
 
@@ -763,7 +950,7 @@
                                     <i data-lucide="briefcase" class="w-4 h-4"></i> Axioo Indonesia
                                 </div>
                                 <p class="text-gray-400 leading-relaxed">
-                                    Terjun langsung menangani real-project di industri. Mempelajari standar *coding*, alur *deployment*, serta metodologi kerja tim dalam pengembangan perangkat lunak berskala besar.
+                                    Terjun langsung menangani real-project di industri. Mempelajari standar coding, alur deployment, serta metodologi kerja tim dalam pengembangan perangkat lunak berskala besar.
                                 </p>
                             </div>
                         </div>
@@ -923,6 +1110,43 @@
                 },
                 { passive: true }
             );
+        }
+
+        // ID card flip interaction (mobile + desktop click)
+        const idCard = document.getElementById('id-card');
+        const idCardToggleBtn = document.getElementById('id-card-toggle');
+
+        if (idCard) {
+            idCard.setAttribute('role', 'button');
+            idCard.setAttribute('tabindex', '0');
+            idCard.setAttribute('aria-pressed', 'false');
+
+            const toggleIdCard = () => {
+                const isFlipped = idCard.classList.toggle('flipped');
+                idCard.setAttribute('aria-pressed', String(isFlipped));
+            };
+
+            idCard.addEventListener('click', (event) => {
+                if (event.target.closest('a') || event.target.closest('button')) {
+                    return;
+                }
+                toggleIdCard();
+            });
+
+            idCard.addEventListener('keydown', (event) => {
+                if (event.key === 'Enter' || event.key === ' ') {
+                    event.preventDefault();
+                    toggleIdCard();
+                }
+            });
+
+            if (idCardToggleBtn) {
+                idCardToggleBtn.addEventListener('click', (event) => {
+                    event.preventDefault();
+                    event.stopPropagation();
+                    toggleIdCard();
+                });
+            }
         }
 
         // Arena parallax depth (lightweight, desktop only)
