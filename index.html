@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Khaidar Ali | Web Developer & Axioo Class Program</title>
+    <meta name="description" content="Portofolio eksklusif Khaidar Ali, Web Developer, pelajar SMK Taruna Bangsa & Axioo Class Program. Keahlian: PHP, Laravel, Frontend, GitLab, dan Deployment.">
+    <meta name="keywords" content="Khaidar Ali, PHP Developer, Laravel Developer, Portofolio Web, SMK Taruna Bangsa, Axioo Class Program, Web Developer Indonesia">
+    <meta name="author" content="Khaidar Ali">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="theme-color" content="#030303">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="id_ID">
+    <meta property="og:site_name" content="Khaidar Ali Portfolio">
+    <meta property="og:title" content="Khaidar Ali | Web Developer & Axioo Class Program">
+    <meta property="og:description" content="Portofolio Khaidar Ali, Web Developer dengan fokus PHP, Laravel, frontend modern, GitLab, dan deployment.">
+    <meta property="og:image" content="https://image.thum.io/get/width/1200/noanimate/https://new.axiooclassprogram.org">
+    <meta property="og:image:alt" content="Preview project Axioo Class Program oleh Khaidar Ali">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Khaidar Ali | Web Developer & Axioo Class Program">
+    <meta name="twitter:description" content="Portofolio Khaidar Ali: PHP, Laravel, frontend modern, GitLab, dan deployment.">
+    <meta name="twitter:image" content="https://image.thum.io/get/width/1200/noanimate/https://new.axiooclassprogram.org">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='18' fill='%23030303'/%3E%3Ctext x='50' y='62' text-anchor='middle' font-size='56' font-family='Arial' fill='%23ffffff'%3EK%3C/text%3E%3C/svg%3E">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Khaidar Ali",
+            "jobTitle": "Web Developer",
+            "description": "Web Developer dan peserta Axioo Class Program dari SMK Taruna Bangsa.",
+            "alumniOf": {
+                "@type": "EducationalOrganization",
+                "name": "SMK Taruna Bangsa"
+            },
+            "affiliation": {
+                "@type": "Organization",
+                "name": "Axioo Class Program"
+            },
+            "knowsAbout": [
+                "PHP",
+                "Laravel",
+                "JavaScript",
+                "Tailwind CSS",
+                "MySQL",
+                "GitLab"
+            ],
+            "sameAs": [
+                "https://instagram.com/kedarr_",
+                "https://gitlab.com/khaidarTB"
+            ]
+        }
+    </script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Custom Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Outfit"', 'sans-serif'],
+                        mono: ['"Fira Code"', 'monospace'],
+                    },
+                    colors: {
+                        dark: '#030303',
+                        darker: '#000000',
+                        accent: {
+                            blue: '#3b82f6',
+                            cyan: '#06b6d4',
+                            purple: '#8b5cf6',
+                            laravel: '#f9322c',
+                            php: '#777bb3'
+                        }
+                    },
+                    animation: {
+                        'blob': 'blob 7s infinite',
+                        'marquee': 'marquee 25s linear infinite',
+                    },
+                    keyframes: {
+                        blob: {
+                            '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                            '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                            '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                            '100%': { transform: 'translate(0px, 0px) scale(1)' },
+                        },
+                        marquee: {
+                            '0%': { transform: 'translateX(0%)' },
+                            '100%': { transform: 'translateX(-50%)' }
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <style>
+        body {
+            background-color: #030303;
+            color: #f3f4f6;
+            overflow-x: hidden;
+        }
+
+        /* Glass Cards Premium */
+        .glass-card {
+            background: linear-gradient(145deg, rgba(20, 20, 20, 0.4) 0%, rgba(5, 5, 5, 0.8) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.02), 0 8px 32px 0 rgba(0, 0, 0, 0.4);
+            backdrop-filter: blur(12px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .glass-card::before {
+            content: '';
+            position: absolute;
+            top: 0; left: -100%;
+            width: 50%; height: 100%;
+            background: linear-gradient(to right, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transform: skewX(-20deg);
+            transition: all 0.6s ease;
+        }
+
+        .glass-card:hover::before {
+            left: 150%;
+        }
+
+        .glass-card:hover {
+            transform: translateY(-8px);
+            border-color: rgba(139, 92, 246, 0.4);
+            box-shadow: 0 15px 40px -5px rgba(139, 92, 246, 0.2);
+        }
+
+        /* Text Effects */
+        .text-gradient {
+            background: linear-gradient(to right, #3b82f6, #8b5cf6, #06b6d4, #3b82f6);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+            background-size: 300% auto;
+            animation: textGradient 6s linear infinite;
+        }
+
+        @keyframes textGradient {
+            0% { background-position: 0% center; }
+            100% { background-position: 300% center; }
+        }
+
+        /* Typing Cursor */
+        .typing-cursor::after {
+            content: '|';
+            animation: blink 1s step-end infinite;
+            color: #8b5cf6;
+        }
+        @keyframes blink { 50% { opacity: 0; } }
+
+        /* Tech Marquee Fade Edges */
+        .marquee-container {
+            mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+            -webkit-mask-image: linear-gradient(to right, transparent, black 15%, black 85%, transparent);
+        }
+
+        /* Project Card Image Zoom */
+        .project-img-wrapper img {
+            transition: transform 0.7s ease;
+        }
+        .project-card:hover .project-img-wrapper img {
+            transform: scale(1.08);
+        }
+
+        /* Scrollbar */
+        ::-webkit-scrollbar { width: 6px; }
+        ::-webkit-scrollbar-track { background: #000; }
+        ::-webkit-scrollbar-thumb { background: #222; border-radius: 10px; }
+        ::-webkit-scrollbar-thumb:hover { background: #444; }
+
+        /* Reveal Defaults */
+        .reveal { opacity: 0; transform: translateY(40px); transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+        .reveal.active { opacity: 1; transform: translateY(0); }
+
+        /* Small-screen tuning to avoid cramped layout and overflow */
+        @media (max-width: 640px) {
+            .marquee-container {
+                mask-image: none;
+                -webkit-mask-image: none;
+            }
+            #tilt-card {
+                transform: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="antialiased selection:bg-accent-purple selection:text-white">
+
+    <!-- Ambient Background -->
+    <div class="fixed inset-0 z-[-1] overflow-hidden pointer-events-none">
+        <div class="absolute top-[-10%] left-[-10%] w-[500px] h-[500px] bg-accent-purple/10 rounded-full mix-blend-screen filter blur-[120px] animate-blob"></div>
+        <div class="absolute bottom-[-10%] right-[-10%] w-[600px] h-[600px] bg-accent-blue/10 rounded-full mix-blend-screen filter blur-[150px] animate-blob" style="animation-delay: 2s;"></div>
+        <!-- Grid pattern -->
+        <div class="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0icmdiYSgyNTUsIDI1NSwgMjU1LCAwLjAzKSIgc3Ryb2tlLXdpZHRoPSIxIi8+PC9wYXR0ZXJuPjwvZGVmcz48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyaWQpIi8+PC9zdmc+')] opacity-50"></div>
+    </div>
+
+    <!-- Navigation -->
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 py-5" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold tracking-tighter flex items-center gap-2 interactive">
+                <div class="relative w-8 h-8 flex items-center justify-center">
+                    <div class="absolute inset-0 bg-gradient-to-tr from-accent-blue to-accent-purple rounded-lg rotate-3 blur-sm opacity-70"></div>
+                    <div class="relative w-full h-full bg-darker border border-white/20 rounded-lg flex items-center justify-center text-white text-sm">K</div>
+                </div>
+                <span>Khaidar Ali<span class="text-accent-purple">.</span></span>
+            </a>
+
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium text-gray-400">
+                <a href="#about" class="hover:text-white transition-colors interactive">Tentang</a>
+                <a href="#skills" class="hover:text-white transition-colors interactive">Keahlian</a>
+                <a href="#projects" class="hover:text-white transition-colors interactive">Proyek</a>
+                <a href="#experience" class="hover:text-white transition-colors interactive">Jejak</a>
+                <a href="#contact" class="px-6 py-2.5 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 transition-all text-white interactive shadow-[0_0_15px_rgba(255,255,255,0.05)] hover:shadow-[0_0_20px_rgba(139,92,246,0.3)]">Mari Ngobrol</a>
+            </nav>
+
+            <button class="md:hidden text-gray-300 hover:text-white focus:outline-none interactive" id="mobile-menu-btn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Nav Menu -->
+        <div class="md:hidden hidden absolute top-full left-0 w-full max-h-[70vh] overflow-y-auto bg-darker/95 backdrop-blur-xl border-t border-white/5 flex-col py-6 px-6 gap-6 shadow-2xl" id="mobile-menu">
+            <a href="#about" class="text-gray-300 hover:text-white text-lg">Tentang</a>
+            <a href="#skills" class="text-gray-300 hover:text-white text-lg">Keahlian</a>
+            <a href="#projects" class="text-gray-300 hover:text-white text-lg">Proyek</a>
+            <a href="#experience" class="text-gray-300 hover:text-white text-lg">Jejak Langkah</a>
+            <a href="#contact" class="text-accent-purple font-medium text-lg">Mari Ngobrol</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[100svh] flex items-center pt-24 md:pt-28 pb-12 overflow-hidden" id="home">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full relative z-10">
+            
+            <div class="lg:col-span-7 space-y-8 z-10 reveal active">
+                <div class="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-gradient-to-r from-accent-purple/10 to-transparent border border-accent-purple/20 text-xs font-medium text-accent-purple backdrop-blur-md">
+                    <span class="relative flex h-2 w-2">
+                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-accent-purple opacity-75"></span>
+                        <span class="relative inline-flex rounded-full h-2 w-2 bg-accent-purple"></span>
+                    </span>
+                    Tersedia untuk Kolaborasi
+                </div>
+                
+                <h1 class="text-4xl sm:text-5xl md:text-7xl lg:text-[5rem] font-extrabold tracking-tight leading-[1.1]">
+                    Merancang Web <br/>
+                    <span class="text-gradient">Masa Depan.</span>
+                </h1>
+                
+                <!-- Typing Effect Container -->
+                <div class="text-lg sm:text-xl md:text-2xl font-medium text-gray-300 h-7 sm:h-8">
+                    Saya seorang <span id="typing-text" class="text-white typing-cursor font-semibold"></span>
+                </div>
+                
+                <p class="text-base md:text-lg text-gray-400 max-w-xl leading-relaxed">
+                    Siswa Axioo Class Program di SMK Taruna Bangsa. Saat ini magang (PKL) di Axioo, mengubah logika kompleks menjadi solusi digital yang elegan dan efisien.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-5 pt-4">
+                    <a href="#projects" class="w-full sm:w-auto justify-center px-8 py-4 rounded-full bg-white text-darker font-bold hover:bg-gray-200 transition-all flex items-center gap-2 interactive hover:scale-105">
+                        Lihat Karya
+                        <i data-lucide="arrow-right" class="w-5 h-5"></i>
+                    </a>
+                    <a href="https://gitlab.com/khaidarTB" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto justify-center px-8 py-4 rounded-full bg-transparent border border-white/20 text-white hover:bg-white/5 transition-all flex items-center gap-2 interactive hover:border-white/40">
+                        <i data-lucide="gitlab" class="w-5 h-5"></i>
+                        GitLab Profile
+                    </a>
+                </div>
+            </div>
+
+            
+            <div class="lg:col-span-5 relative w-full aspect-[4/5] md:aspect-square max-w-xs sm:max-w-md md:max-w-lg mx-auto z-10 reveal active perspective-1000">
+                
+               
+                <div id="tilt-card" class="w-full h-full relative transform-style-3d transition-transform duration-200 ease-out">
+                    
+                    <div class="absolute inset-0 bg-gradient-to-br from-accent-blue/30 via-accent-purple/20 to-transparent rounded-3xl blur-2xl transform -translate-z-10"></div>
+                    
+                    
+                    <div class="absolute inset-0 bg-darker/80 backdrop-blur-xl rounded-3xl border border-white/10 p-6 md:p-8 flex flex-col shadow-2xl">
+                       
+                        <div class="flex gap-2 mb-8">
+                            <div class="w-3 h-3 rounded-full bg-[#ff5f56]"></div>
+                            <div class="w-3 h-3 rounded-full bg-[#ffbd2e]"></div>
+                            <div class="w-3 h-3 rounded-full bg-[#27c93f]"></div>
+                        </div>
+
+                       
+                        <div class="font-mono text-xs sm:text-sm md:text-base text-gray-400 space-y-2 sm:space-y-3 flex-grow leading-relaxed overflow-hidden">
+                            <p><span class="text-accent-purple">const</span> <span class="text-white">developer</span> <span class="text-accent-cyan">=</span> {</p>
+                            <p class="pl-6"><span class="text-gray-300">name</span>: <span class="text-[#a6e22e]">'Khaidar Ali'</span>,</p>
+                            <p class="pl-6"><span class="text-gray-300">role</span>: <span class="text-[#a6e22e]">'PHP Developer'</span>,</p>
+                            <p class="pl-6"><span class="text-gray-300">school</span>: <span class="text-[#a6e22e]">'SMK Taruna Bangsa'</span>,</p>
+                            <p class="pl-6"><span class="text-gray-300">internship</span>: <span class="text-[#a6e22e]">'Axioo Indonesia'</span>,</p>
+                            <br>
+                            <p class="pl-6"><span class="text-accent-blue">build</span>() {</p>
+                            <p class="pl-12"><span class="text-accent-purple">return</span> <span class="text-[#e6db74]">this</span>.skills.map(<span class="text-accent-cyan">tech</span> <span class="text-accent-purple">=></span> {</p>
+                            <p class="pl-16"><span class="text-accent-blue">createMagic</span>(tech);</p>
+                            <p class="pl-12">});</p>
+                            <p class="pl-6">}</p>
+                            <p>};</p>
+                        </div>
+                    </div>
+
+                    <!-- Floating Badges -->
+                    <div class="hidden sm:flex absolute -bottom-6 -left-6 md:bottom-10 md:-left-10 w-16 h-16 rounded-2xl bg-darker/60 border border-white/10 items-center justify-center backdrop-blur-xl shadow-2xl transform rotate-12 translate-z-20">
+                        <i data-lucide="blocks" class="text-accent-blue w-8 h-8"></i>
+                    </div>
+                    <div class="hidden sm:flex absolute top-10 -right-4 md:top-20 md:-right-12 w-16 h-16 rounded-2xl bg-darker/60 border border-white/10 items-center justify-center backdrop-blur-xl shadow-2xl transform -rotate-12 translate-z-20">
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9a/Laravel.svg" alt="Logo Laravel" class="w-8 h-8" width="32" height="32" decoding="async">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Infinite Marquee Tech Stack -->
+    <div class="py-8 md:py-10 border-y border-white/5 bg-white/[0.01] marquee-container overflow-hidden flex relative">
+        <div class="flex animate-marquee whitespace-nowrap min-w-full">
+            <!-- Set 1 -->
+            <div class="flex items-center gap-8 md:gap-12 px-4 md:px-6 text-gray-400 font-medium text-sm md:text-lg tracking-wide md:tracking-wider">
+                <span class="flex items-center gap-2"><i data-lucide="file-code-2" class="w-5 h-5"></i> PHP 8.x</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2 text-accent-laravel"><i data-lucide="flame" class="w-5 h-5"></i> Laravel</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2 text-accent-cyan"><i data-lucide="wind" class="w-5 h-5"></i> Tailwind CSS</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2"><i data-lucide="database" class="w-5 h-5"></i> MySQL</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2"><i data-lucide="file-json" class="w-5 h-5"></i> JavaScript</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2 text-orange-400"><i data-lucide="git-merge" class="w-5 h-5"></i> GitLab</span>
+                <span class="text-white/20">•</span>
+            </div>
+            <!-- Set 2 (Duplicate for seamless loop) -->
+            <div class="flex items-center gap-8 md:gap-12 px-4 md:px-6 text-gray-400 font-medium text-sm md:text-lg tracking-wide md:tracking-wider">
+                <span class="flex items-center gap-2"><i data-lucide="file-code-2" class="w-5 h-5"></i> PHP 8.x</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2 text-accent-laravel"><i data-lucide="flame" class="w-5 h-5"></i> Laravel</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2 text-accent-cyan"><i data-lucide="wind" class="w-5 h-5"></i> Tailwind CSS</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2"><i data-lucide="database" class="w-5 h-5"></i> MySQL</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2"><i data-lucide="file-json" class="w-5 h-5"></i> JavaScript</span>
+                <span class="text-white/20">•</span>
+                <span class="flex items-center gap-2 text-orange-400"><i data-lucide="git-merge" class="w-5 h-5"></i> GitLab</span>
+                <span class="text-white/20">•</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="py-24 md:py-32 relative" id="about">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                
+                <div class="lg:col-span-5 reveal">
+                    <p class="text-accent-purple font-semibold tracking-wider uppercase text-sm mb-4">Tentang Saya</p>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6 leading-tight">Dari Siswa Menjadi <br><span class="text-gray-500 text-3xl md:text-4xl">Pencipta Solusi.</span></h2>
+                </div>
+                
+                <div class="lg:col-span-7 glass-card p-6 sm:p-8 md:p-10 rounded-[2rem] reveal">
+                    <div class="space-y-6 text-gray-300 leading-relaxed text-base sm:text-lg">
+                        <p>
+                            Salam kenal! Saya Khaidar Ali. Saat ini saya adalah pelajar kelas 8 di <strong class="text-white border-b border-white/30 pb-0.5">SMK Taruna Bangsa</strong>. Minat saya pada teknologi membawa saya bergabung dengan <strong class="text-accent-blue">Axioo Class Program</strong>.
+                        </p>
+                        <p>
+                            Sekarang, saya sedang menjalani <strong class="text-white">Praktek Kerja Lapangan (PKL) di Axioo</strong>. Ini bukan sekadar magang biasa; di sini saya belajar best-practice pengembangan software, kolaborasi tim (GitLab), dan arsitektur aplikasi berbasis enterprise.
+                        </p>
+                        <p>
+                            Senjata utama saya adalah <strong class="text-accent-laravel">PHP & Laravel</strong>. Saya suka merancang database yang efisien, membangun API yang cepat, dan menyatukannya dengan *frontend* modern agar pengguna mendapatkan pengalaman terbaik.
+                        </p>
+                    </div>
+
+                    <div class="grid grid-cols-2 md:grid-cols-3 gap-6 mt-12 pt-8 border-t border-white/10">
+                        <div>
+                            <div class="text-4xl font-bold text-white mb-2 tracking-tighter">01<span class="text-accent-purple">+</span></div>
+                            <div class="text-sm text-gray-500 font-medium">Tahun Fokus Ngoding</div>
+                        </div>
+                        <div>
+                            <div class="text-4xl font-bold text-white mb-2 tracking-tighter">10<span class="text-accent-blue">+</span></div>
+                            <div class="text-sm text-gray-500 font-medium">Proyek Eksperimen</div>
+                        </div>
+                        <div class="col-span-2 md:col-span-1">
+                            <div class="text-xl font-bold text-white mb-2 flex items-center gap-2 bg-white/5 w-max px-3 py-1.5 rounded-lg border border-white/10">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e9/Axioo_logo.png" alt="Logo Axioo" class="h-4 object-contain brightness-0 invert opacity-80" width="64" height="16" loading="lazy" decoding="async">
+                                ACP
+                            </div>
+                            <div class="text-sm text-gray-500 font-medium">Class Program Member</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="py-24 md:py-32 relative bg-darker/30" id="projects">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 reveal">
+                <div>
+                    <p class="text-accent-blue font-semibold tracking-wider uppercase text-sm mb-4">Portofolio</p>
+                    <h2 class="text-4xl md:text-5xl font-bold">Karya <span class="text-white/40">&</span> Proyek</h2>
+                </div>
+                <p class="text-gray-400 mt-4 md:mt-0 max-w-sm text-base md:text-right">Proyek utama yang saat ini saya kembangkan dan deploy.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 max-w-2xl mx-auto">
+                
+                <!-- Project 1 -->
+                <div class="project-card glass-card rounded-3xl p-3 group interactive reveal">
+                    <div class="project-img-wrapper relative w-full aspect-video rounded-2xl overflow-hidden mb-6 bg-darker border border-white/5">
+                        <img src="https://image.thum.io/get/width/1200/noanimate/https://new.axiooclassprogram.org" alt="Preview website Axioo Class Program" class="w-full h-full object-cover object-top" width="1200" height="675" loading="lazy" decoding="async">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent"></div>
+                        <div class="absolute top-4 left-4 flex gap-2 z-10">
+                            <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-xs font-medium text-white border border-white/10">Company Profile</span>
+                            <span class="px-3 py-1 rounded-full bg-black/60 backdrop-blur-md text-xs font-medium text-white border border-white/10">Responsive</span>
+                        </div>
+                        <div class="absolute top-4 right-4 z-10 px-3 py-1.5 rounded-lg bg-white/90 border border-white/70 shadow-lg flex items-center gap-2">
+                            <img src="https://www.google.com/s2/favicons?sz=64&domain=new.axiooclassprogram.org" alt="Logo Axioo Class Program" class="h-4 w-4 object-contain rounded-sm" width="16" height="16" loading="lazy" decoding="async">
+                            <span class="text-[11px] font-bold tracking-wide text-black">ACP</span>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4">
+                        <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-accent-blue transition-colors">Axioo Class Program</h3>
+                        <p class="text-gray-400 text-sm mb-6 leading-relaxed">Website project yang sudah online untuk kebutuhan informasi dan branding Axioo Class Program.</p>
+                        <a href="https://new.axiooclassprogram.org" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-sm font-bold text-white hover:text-accent-blue transition-colors">
+                            Kunjungi Website <i data-lucide="arrow-up-right" class="w-4 h-4"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+  
+    <section class="py-24 md:py-32 relative" id="skills">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+            <div class="mb-16 reveal text-center">
+                <p class="text-accent-laravel font-semibold tracking-wider uppercase text-sm mb-4">Tech Stack</p>
+                <h2 class="text-4xl md:text-5xl font-bold">Keahlian & <span class="text-gray-500">Alat Tempur</span></h2>
+            </div>
+
+        
+            <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-4 auto-rows-[220px]">
+                
+                
+                <div class="md:col-span-2 lg:col-span-2 row-span-2 glass-card rounded-[2rem] p-6 md:p-8 flex flex-col justify-between reveal">
+                    <div class="flex justify-between items-start">
+                        <div class="space-y-2">
+                            <h3 class="text-3xl font-bold text-white">Backend Engine</h3>
+                            <p class="text-gray-400">Merakit logika bisnis dan manajemen database.</p>
+                        </div>
+                        <div class="flex gap-2">
+                            <div class="w-12 h-12 rounded-xl bg-[#777bb3]/10 flex items-center justify-center border border-[#777bb3]/30 text-[#777bb3]">
+                                <i data-lucide="file-code" class="w-6 h-6"></i>
+                            </div>
+                            <div class="w-12 h-12 rounded-xl bg-[#ef4444]/10 flex items-center justify-center border border-[#ef4444]/30 text-[#ef4444]">
+                                <i data-lucide="flame" class="w-6 h-6"></i>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-8 space-y-6">
+                        <div class="group">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-gray-300 font-medium">PHP 8.x / OOP</span>
+                                <span class="text-accent-php font-bold">90%</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-2 overflow-hidden">
+                                <div class="bg-accent-php h-2 rounded-full transform origin-left transition-transform duration-1000 group-hover:scale-x-105" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="group">
+                            <div class="flex justify-between text-sm mb-2">
+                                <span class="text-gray-300 font-medium">Laravel Framework</span>
+                                <span class="text-accent-laravel font-bold">85%</span>
+                            </div>
+                            <div class="w-full bg-white/5 rounded-full h-2 overflow-hidden">
+                                <div class="bg-gradient-to-r from-red-600 to-red-400 h-2 rounded-full transform origin-left transition-transform duration-1000 group-hover:scale-x-105" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Frontend Card -->
+                <div class="md:col-span-1 lg:col-span-2 glass-card rounded-[2rem] p-6 md:p-8 relative overflow-hidden reveal">
+                    <div class="relative z-10 flex flex-col h-full justify-between">
+                        <div>
+                            <div class="w-12 h-12 rounded-xl bg-blue-500/10 text-blue-400 flex items-center justify-center border border-blue-500/20 mb-6">
+                                <i data-lucide="layout" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold text-white mb-2">Frontend Stack</h3>
+                            <p class="text-gray-400 leading-relaxed">Menerjemahkan UI/UX menjadi antarmuka responsif dengan <span class="text-white">HTML5, CSS, JS</span> & <span class="text-accent-cyan">Tailwind</span>.</p>
+                        </div>
+                    </div>
+                    <i data-lucide="monitor" class="absolute -bottom-6 -right-6 w-40 h-40 text-white/[0.03] transform -rotate-12"></i>
+                </div>
+
+                <!-- GitLab Card -->
+                <div class="glass-card rounded-[2rem] p-6 flex flex-col justify-center items-center text-center reveal group">
+                    <div class="w-20 h-20 rounded-2xl bg-orange-500/10 text-orange-500 flex items-center justify-center mb-4 border border-orange-500/20 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="git-merge" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">GitLab</h3>
+                    <p class="text-sm text-gray-500 mt-2">Version Control</p>
+                </div>
+
+                <!-- Deployment Card -->
+                <div class="glass-card rounded-[2rem] p-6 flex flex-col justify-center items-center text-center reveal group">
+                    <div class="w-20 h-20 rounded-2xl bg-emerald-500/10 text-emerald-400 flex items-center justify-center mb-4 border border-emerald-500/20 group-hover:scale-110 transition-transform duration-300">
+                        <i data-lucide="server" class="w-10 h-10"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-white">Deployment</h3>
+                    <p class="text-sm text-gray-500 mt-2">Hosting & cPanel</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Timeline -->
+    <section class="py-24 md:py-32 relative bg-darker/50" id="experience">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-12">
+            <div class="text-center mb-20 reveal">
+                <h2 class="text-4xl md:text-5xl font-bold">Jejak <span class="text-white/40">Langkah</span></h2>
+            </div>
+
+            <div class="relative border-l-2 border-white/10 ml-4 md:ml-0 md:space-y-16 space-y-10">
+                
+                <!-- Timeline 1 -->
+                <div class="relative pl-8 md:pl-0 reveal">
+                    <div class="md:grid md:grid-cols-5 items-start">
+                        <div class="hidden md:block col-span-1 text-right pr-10 text-sm text-accent-blue font-bold tracking-widest uppercase pt-1">
+                            Saat ini
+                        </div>
+                        <div class="absolute left-[-9px] md:left-[19.5%] top-1.5 w-4 h-4 rounded-full bg-accent-blue shadow-[0_0_20px_rgba(59,130,246,0.8)] border-4 border-darker z-10"></div>
+                        <div class="md:col-span-4 md:pl-10">
+                            <span class="md:hidden text-xs text-accent-blue font-bold tracking-widest uppercase block mb-2">Saat ini</span>
+                            <div class="glass-card p-6 md:p-8 rounded-3xl group hover:border-accent-blue/30">
+                                <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-accent-blue transition-colors">PKL (Praktik Kerja Lapangan)</h3>
+                                <div class="text-white/60 text-sm font-medium mb-4 flex items-center gap-2">
+                                    <i data-lucide="briefcase" class="w-4 h-4"></i> Axioo Indonesia
+                                </div>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Terjun langsung menangani real-project di industri. Mempelajari standar *coding*, alur *deployment*, serta metodologi kerja tim dalam pengembangan perangkat lunak berskala besar.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline 2 -->
+                <div class="relative pl-8 md:pl-0 reveal">
+                    <div class="md:grid md:grid-cols-5 items-start">
+                        <div class="hidden md:block col-span-1 text-right pr-10 text-sm text-accent-purple font-bold tracking-widest uppercase pt-1">
+                            Aktif
+                        </div>
+                        <div class="absolute left-[-9px] md:left-[19.5%] top-1.5 w-4 h-4 rounded-full bg-accent-purple shadow-[0_0_20px_rgba(139,92,246,0.6)] border-4 border-darker z-10"></div>
+                        <div class="md:col-span-4 md:pl-10">
+                            <span class="md:hidden text-xs text-accent-purple font-bold tracking-widest uppercase block mb-2">Aktif</span>
+                            <div class="glass-card p-6 md:p-8 rounded-3xl group hover:border-accent-purple/30">
+                                <h3 class="text-2xl font-bold text-white mb-1 group-hover:text-accent-purple transition-colors">Axioo Class Program</h3>
+                                <div class="text-white/60 text-sm font-medium mb-4 flex items-center gap-2">
+                                    <i data-lucide="award" class="w-4 h-4"></i> Program Edukasi Khusus
+                                </div>
+                                <p class="text-gray-400 leading-relaxed">
+                                    Bergabung dalam kelas unggulan yang dirancang khusus untuk mencetak talenta IT siap kerja, menyelaraskan ilmu sekolah dengan kurikulum industri teknologi terkini.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline 3 -->
+                <div class="relative pl-8 md:pl-0 reveal">
+                    <div class="md:grid md:grid-cols-5 items-start">
+                        <div class="hidden md:block col-span-1 text-right pr-10 text-sm text-gray-500 font-bold tracking-widest uppercase pt-1">
+                            Sekolah
+                        </div>
+                        <div class="absolute left-[-9px] md:left-[19.5%] top-1.5 w-4 h-4 rounded-full bg-gray-600 border-4 border-darker z-10"></div>
+                        <div class="md:col-span-4 md:pl-10">
+                            <span class="md:hidden text-xs text-gray-500 font-bold tracking-widest uppercase block mb-2">Sekolah</span>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-white mb-1">SMK Taruna Bangsa</h3>
+                                <div class="text-gray-500 text-sm mb-3">Siswa Kelas 8</div>
+                                <p class="text-gray-400">
+                                    Memulai fondasi logika, algoritma, dan dasar-dasar rekayasa perangkat lunak.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer / CTA -->
+    <footer class="relative pt-24 md:pt-32 pb-10 border-t border-white/10 overflow-hidden" id="contact">
+        <!-- Massive Background Glow -->
+        <div class="absolute bottom-[-20%] left-1/2 transform -translate-x-1/2 w-full max-w-4xl h-96 bg-gradient-to-t from-accent-purple/30 to-transparent filter blur-[100px] rounded-full z-[-1] pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 text-center reveal">
+            <h2 class="text-4xl sm:text-5xl md:text-7xl font-extrabold mb-8 tracking-tighter">Punya Ide <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white to-gray-500">Brilian?</span></h2>
+            <p class="text-gray-400 max-w-xl mx-auto mb-12 text-lg md:text-xl">
+                Saya selalu terbuka untuk berdiskusi, kolaborasi proyek, atau sekadar berbagi wawasan seputar web development.
+            </p>
+            
+            <a href="mailto:contact@domain.com" class="interactive inline-flex w-full sm:w-auto justify-center items-center gap-3 px-10 py-5 rounded-full bg-white text-darker font-bold text-lg hover:scale-105 transition-transform duration-300 shadow-[0_0_40px_rgba(255,255,255,0.2)]">
+                <i data-lucide="mail" class="w-6 h-6"></i>
+                Mulai Percakapan
+            </a>
+
+            <div class="flex flex-wrap justify-center items-center gap-4 mt-14 mb-16">
+                <a href="https://instagram.com/kedarr_" target="_blank" rel="noopener noreferrer" aria-label="Instagram" class="interactive inline-flex items-center gap-2 h-12 px-5 rounded-full bg-[#E4405F]/15 border border-[#E4405F]/40 text-[#f9a8d4] hover:bg-[#E4405F] hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-[0_0_20px_rgba(228,64,95,0.2)]">
+                    <i data-lucide="instagram" class="w-5 h-5"></i>
+                    <span class="text-sm font-semibold">@kedarr_</span>
+                </a>
+                <a href="https://gitlab.com/khaidarTB" target="_blank" rel="noopener noreferrer" aria-label="GitLab" class="interactive inline-flex items-center gap-2 h-12 px-5 rounded-full bg-[#fc6d26]/15 border border-[#fc6d26]/40 text-[#fdba74] hover:bg-[#fc6d26] hover:text-white hover:-translate-y-1 transition-all duration-300 shadow-[0_0_20px_rgba(252,109,38,0.2)]">
+                    <i data-lucide="gitlab" class="w-5 h-5"></i>
+                    <span class="text-sm font-semibold">@khaidarTB</span>
+                </a>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center pt-8 border-t border-white/10 text-sm text-gray-500 font-medium">
+                <p>&copy; 2026 Khaidar Ali | PHP Developer</p>
+              
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Typing Effect Logic
+        const words = ["PHP Developer.", "Web Developer.", "Pelajar SMK.", "Laravel Enthusiast."];
+        let i = 0;
+        let timer;
+
+        function typingEffect() {
+            let word = words[i].split("");
+            var loopTyping = function() {
+                if (word.length > 0) {
+                    document.getElementById('typing-text').innerHTML += word.shift();
+                } else {
+                    setTimeout(deletingEffect, 2000); // Wait before deleting
+                    return false;
+                }
+                timer = setTimeout(loopTyping, 100);
+            };
+            loopTyping();
+        }
+
+        function deletingEffect() {
+            let word = words[i].split("");
+            var loopDeleting = function() {
+                if (word.length > 0) {
+                    word.pop();
+                    document.getElementById('typing-text').innerHTML = word.join("");
+                } else {
+                    if (words.length > (i + 1)) {
+                        i++;
+                    } else {
+                        i = 0;
+                    }
+                    setTimeout(typingEffect, 500); // Wait before typing next
+                    return false;
+                }
+                timer = setTimeout(loopDeleting, 50);
+            };
+            loopDeleting();
+        }
+
+        // Start typing effect on load
+        setTimeout(typingEffect, 1000);
+
+        // Navbar Scroll Effect
+        const navbar = document.getElementById('navbar');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                navbar.classList.add('bg-darker/80', 'backdrop-blur-xl', 'border-b', 'border-white/5');
+                navbar.classList.remove('py-5');
+                navbar.classList.add('py-3');
+            } else {
+                navbar.classList.remove('bg-darker/80', 'backdrop-blur-xl', 'border-b', 'border-white/5');
+                navbar.classList.add('py-5');
+                navbar.classList.remove('py-3');
+            }
+        });
+
+        // Mobile Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            mobileMenu.classList.toggle('flex');
+        });
+
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                mobileMenu.classList.remove('flex');
+            });
+        });
+
+        // Reveal Animations on Scroll
+        const revealElements = document.querySelectorAll('.reveal:not(.active)');
+        
+        const revealOptions = {
+            threshold: 0.1,
+            rootMargin: "0px 0px -50px 0px"
+        };
+
+        const revealOnScroll = new IntersectionObserver(function(entries, observer) {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, revealOptions);
+
+        revealElements.forEach(el => revealOnScroll.observe(el));
+    </script>
+</body>
+</html>
