@@ -53,6 +53,27 @@
         }
         .nav-link:hover::after { width: 100%; }
 
+        .nav-shell {
+            margin-inline: auto;
+            width: fit-content;
+            max-width: 95vw;
+            padding: 0.5rem 1rem;
+            border-radius: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .skill-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 1rem;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 0.5rem;
+            transition: background-color 0.2s ease;
+        }
+        .skill-card:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
         /* Swinging Animation for Container */
         .transform-origin-top { transform-origin: top center; }
 
@@ -182,13 +203,22 @@
                 background-attachment: scroll;
             }
         }
+
+        @media (min-width: 768px) {
+            .nav-shell {
+                padding: 0;
+                border-radius: 0;
+                border: 0;
+                background: transparent;
+            }
+        }
     </style>
 </head>
 <body class="antialiased selection:bg-white selection:text-black">
 
     <!-- Navbar -->
     <header class="fixed top-0 w-full pt-4 pb-4 md:pt-8 md:pb-6 z-50 bg-gradient-to-b from-dark/95 to-transparent backdrop-blur-sm">
-        <nav class="mx-auto w-fit max-w-[95vw] px-4 py-2 md:p-0 rounded-2xl md:rounded-none border border-white/10 md:border-0 bg-black/30 md:bg-transparent flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-16 text-[10px] sm:text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-gray-400">
+        <nav class="nav-shell flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-16 text-[10px] sm:text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-gray-400">
             <a href="#home" class="nav-link hover:text-white transition-colors px-1">Home</a>
             <a href="#about" class="nav-link hover:text-white transition-colors px-1">About</a>
             <a href="#history" class="nav-link hover:text-white transition-colors px-1">History</a>
@@ -378,19 +408,19 @@
 
                     <!-- Skills as Card Stats -->
                     <div class="mt-8 md:mt-10 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        <div class="border border-white/10 p-4 bg-white/[0.03] hover:bg-white/[0.05] transition-colors rounded-lg">
+                        <div class="skill-card">
                             <p class="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Backend</p>
                             <p class="font-serif text-xl text-white">PHP, Laravel</p>
                         </div>
-                        <div class="border border-white/10 p-4 bg-white/[0.03] hover:bg-white/[0.05] transition-colors rounded-lg">
+                        <div class="skill-card">
                             <p class="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Frontend</p>
                             <p class="font-serif text-xl text-white">HTML, CSS, JS</p>
                         </div>
-                        <div class="border border-white/10 p-4 bg-white/[0.03] hover:bg-white/[0.05] transition-colors rounded-lg">
+                        <div class="skill-card">
                             <p class="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Tools</p>
                             <p class="font-serif text-xl text-white">GitLab</p>
                         </div>
-                        <div class="border border-white/10 p-4 bg-white/[0.03] hover:bg-white/[0.05] transition-colors rounded-lg">
+                        <div class="skill-card">
                             <p class="text-xs text-gray-500 uppercase tracking-widest font-bold mb-1">Server</p>
                             <p class="font-serif text-xl text-white">Deployment</p>
                         </div>
