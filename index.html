@@ -38,6 +38,7 @@
 
     <style>
         body {
+            --header-offset: 6rem;
             background-color: #050505;
             color: #ffffff;
             overflow-x: hidden;
@@ -67,7 +68,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1rem;
             background: rgba(255, 255, 255, 0.03);
-            border-radius: 0.5rem;
+            border-radius: 0.75rem;
             transition: background-color 0.2s ease;
         }
         .skill-card:hover {
@@ -78,7 +79,7 @@
         .transform-origin-top { transform-origin: top center; }
 
         section[id], footer[id] {
-            scroll-margin-top: 7rem;
+            scroll-margin-top: var(--header-offset);
         }
 
         /* 3D Flip Card CSS */
@@ -205,6 +206,10 @@
         }
 
         @media (min-width: 768px) {
+            body {
+                --header-offset: 7rem;
+            }
+
             .nav-shell {
                 padding: 0;
                 border-radius: 0;
@@ -218,7 +223,7 @@
 
     <!-- Navbar -->
     <header class="fixed top-0 w-full pt-4 pb-4 md:pt-8 md:pb-6 z-50 bg-gradient-to-b from-dark/95 to-transparent backdrop-blur-sm">
-        <nav class="nav-shell flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-16 text-[10px] sm:text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-gray-400">
+        <nav class="nav-shell flex flex-wrap justify-center gap-x-4 gap-y-2 md:gap-16 text-xs md:text-sm font-medium tracking-[0.2em] uppercase text-gray-400">
             <a href="#home" class="nav-link hover:text-white transition-colors px-1">Home</a>
             <a href="#about" class="nav-link hover:text-white transition-colors px-1">About</a>
             <a href="#history" class="nav-link hover:text-white transition-colors px-1">History</a>
