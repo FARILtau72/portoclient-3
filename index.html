@@ -37,8 +37,11 @@
     </script>
 
     <style>
-        body {
+        :root {
             --header-scroll-margin: 6rem;
+        }
+
+        body {
             background-color: #050505;
             color: #ffffff;
             overflow-x: hidden;
@@ -59,7 +62,7 @@
             width: fit-content;
             max-width: 95vw;
             padding: 0.5rem 1rem;
-            border-radius: 1rem;
+            border-radius: 0.5rem;
             border: 1px solid rgba(255, 255, 255, 0.1);
             background: rgba(0, 0, 0, 0.3);
         }
@@ -68,7 +71,7 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             padding: 1rem;
             background: rgba(255, 255, 255, 0.03);
-            border-radius: 0.75rem;
+            border-radius: 0.5rem;
             transition: background-color 0.2s ease;
         }
         .skill-card:hover {
@@ -206,7 +209,7 @@
         }
 
         @media (min-width: 768px) {
-            body {
+            :root {
                 --header-scroll-margin: 7rem;
             }
 
@@ -238,7 +241,7 @@
         <!-- Large Typography Title -->
         <div class="z-10 w-full lg:w-2/3 md:mt-[-5vh]">
             <p class="text-gray-500 tracking-[0.3em] text-xs md:text-sm font-medium mb-4 pl-1">AXIOO CLASS PROGRAM</p>
-            <h1 class="font-serif text-[2.8rem] sm:text-[3.5rem] md:text-[6rem] lg:text-[8rem] leading-[0.95] md:leading-[0.9] font-bold text-[#e5e5e5] title-distorted uppercase">
+            <h1 class="font-serif text-5xl sm:text-6xl md:text-8xl lg:text-9xl leading-[0.95] md:leading-[0.9] font-bold text-[#e5e5e5] title-distorted uppercase">
                 Portofolio
             </h1>
             <h2 class="font-sans text-lg sm:text-xl md:text-3xl text-gray-400 mt-4 md:mt-6 font-light">
